@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "780060955651",
+    "project_id": "farmbot-30369",
+    "storage_bucket": "farmbot-30369.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780060955651:android:6c128d01aa03ddad2fea36",
+        "android_client_info": {
+          "package_name": "com.bot.farmbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780060955651-46vaj9snaav0jdev2n4m3nin3lfen82b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIfx45WQfAiMHu4p7lteIxvLzrflwduiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780060955651-46vaj9snaav0jdev2n4m3nin3lfen82b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "780060955651-puigjunqf3c5ugq3cop3g74hp868to8o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.new.farmbot"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

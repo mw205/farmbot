@@ -1,0 +1,74 @@
+name: farmbot
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  cached_network_image: ^3.4.1
+  dio: ^5.7.0
+  flutter:
+    sdk: flutter
+  flutter_animate: ^4.5.0
+  flutter_gen: ^5.7.0
+  gap: ^3.0.1
+  get: ^4.6.6
+  get_storage: ^2.1.1
+  json_annotation: ^4.9.0
+  lottie: ^3.1.2
+  permission_handler: ^11.3.1
+  skeletonizer: ^1.4.2
+  smooth_page_indicator: ^1.2.0+3
+  flutter_local_notifications: ^17.2.2
+  connectivity_plus: ^6.0.5
+  pull_to_refresh: ^2.0.0
+  freezed_annotation: ^2.4.4
+  firebase_auth: ^5.2.1
+  firebase_core: ^3.4.1
+  text_divider: ^1.0.0
+  flutter_svg: ^2.0.10+1
+  google_sign_in: ^6.2.1
+  country_code_picker: ^3.0.0
+  modal_progress_hud_nsn: ^0.5.1
+  firebase_messaging: ^15.1.1
+  dio_cache_interceptor: ^3.5.0
+  either_dart: ^1.0.0
+  firebase_storage: ^12.3.0
+  flutter_watermark: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  json_serializable: ^6.8.0
+  build_runner: ^2.4.12
+  flutter_gen_runner: ^5.7.0
+  freezed: ^2.5.7
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/animation/
+  fonts:
+  # - family: Montserrat
+  #   fonts:
+  #     -  asset: assets/fonts/Montserrat-Regular.ttf
+  - family: Zain
+    fonts:
+      -  asset: assets/fonts/Zain-Regular.ttf
+
+flutter_gen:
+  output: lib/gen
+  integrations:
+    flutter_svg: true
+    flare_flutter: true
+    rive: true
+    lottie: true
+  colors:
+    inputs:
+      - assets/colors/colors.xml
+
