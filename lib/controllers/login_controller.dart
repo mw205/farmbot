@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:farmbot/constants/my_strings.dart';
 import 'package:farmbot/controllers/settings_services.dart';
 import 'package:farmbot/model/api_result.dart';
@@ -115,6 +113,5 @@ class LoginController extends GetxController {
     } catch (e) {
       isAuthed.value = false;
     }
-    log("is User Authed : ${isAuthed.value}");
   }
 }

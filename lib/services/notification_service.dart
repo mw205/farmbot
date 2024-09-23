@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:farmbot/constants/my_strings.dart';
 import 'package:farmbot/services/api_call_handler.dart';
@@ -18,7 +16,6 @@ class NotificationService {
     if (fcmToken != null) {
       signFCMToken(fcmToken);
     }
-    log("fcm_token $fcmToken");
   }
 
   void signFCMToken(String fcmToken) {
