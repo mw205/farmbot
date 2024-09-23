@@ -55,5 +55,6 @@ class ArTranslation {
     "Log Out": "تسجيل خروج",
     "Profile Details": "تفاصيل الحساب",
     "Change Language": "تغيير اللغة",
+    "there is an error!!": "يوجد خطأ !!"
   };
 }

@@ -52,5 +52,6 @@ class EnTranslation {
     "Log Out": "Log Out",
     "Profile Details": "Profile Details",
     "Change Language": "Change Language",
+    "there is an error!!": "there is an error!!"
   };
 }

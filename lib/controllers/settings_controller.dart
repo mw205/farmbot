@@ -30,7 +30,7 @@ class SettingsController extends GetxController {
     } catch (e) {
       isLoading.value = false;
 
-      Get.snackbar("Error!!".tr, "there is an error!!");
+      Get.snackbar("Error!!".tr, "there is an error!!".tr);
     }
   }
 }
