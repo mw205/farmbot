@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "780060955651-4h66r7e0j70jtttj3s5k95c4qfjauup6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bot.farmbot",
+            "certificate_hash": "4f43e95acb819837b367a3fc33f15ec5fc35b80d"
+          }
+        },
+        {
           "client_id": "780060955651-46vaj9snaav0jdev2n4m3nin3lfen82b.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -31,10 +39,10 @@
               "client_type": 3
             },
             {
-              "client_id": "780060955651-puigjunqf3c5ugq3cop3g74hp868to8o.apps.googleusercontent.com",
+              "client_id": "780060955651-1j09j1fpv94v31p9snqek9o3ghtcjer8.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.new.farmbot"
+                "bundle_id": "com.bot.farmbot"
               }
             }
           ]
