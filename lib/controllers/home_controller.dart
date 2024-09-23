@@ -2,7 +2,9 @@ import 'package:farmbot/controllers/settings_services.dart';
 import 'package:farmbot/gen/colors.gen.dart';
 import 'package:farmbot/model/api_result.dart';
 import 'package:farmbot/model/drawer_options.dart';
+import 'package:farmbot/model/spots_data_model.dart';
 import 'package:farmbot/model/user_model.dart';
+import 'package:farmbot/services/plants_service.dart';
 import 'package:farmbot/services/profile_service.dart';
 import 'package:farmbot/views/profile_view.dart';
 import 'package:farmbot/views/settings_view.dart';
@@ -36,11 +38,13 @@ class HomeController extends GetxController {
     ),
   ];
   final user = Rxn<dynamic>();
+  Rx<List<SpotsDataModel?>?> spotsDataList = Rx<List<SpotsDataModel?>?>(null);
   RxBool isLoading = false.obs;
   @override
   void onInit() async {
     if (SettingsServices.instance.accessToken != null) {
       await fetchProfileData();
+      await fetchSpotsData();
     } else if (FirebaseAuth.instance.currentUser != null) {
       user.value = FirebaseAuth.instance.currentUser;
     }
@@ -60,6 +64,29 @@ class HomeController extends GetxController {
         isLoading.value = false;
       },
     );
+  }
+
+  Future<void> fetchSpotsData() async {
+    isLoading.value = true;
+    ApiResult<List<SpotsDataModel>> apiResult =
+        await PlantsServiceImp().getSpotsData();
+    apiResult.when(
+      success: (data) {
+        spotsDataList.value = data;
+        isLoading.value = false;
+      },
+      error: (error) {
+        Get.snackbar("Error!!".tr, "there is an error!!".tr);
+        isLoading.value = false;
+      },
+    );
+  }
+
+  Future<void> refreshData() async {
+    spotsDataList.value = null;
+    user.value = null;
+    await fetchProfileData();
+    await fetchSpotsData();
   }
 
   String? getUserFirstName() {

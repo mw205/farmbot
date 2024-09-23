@@ -13,5 +13,6 @@ class MyStrings {
   static const String login = "login";
   static const String register = "register";
   static const String profile = "profile";
+  static const String spots = "/spots";
   static const String fcmToken = "fcm-token";
 }

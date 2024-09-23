@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:farmbot/constants/my_styles.dart';
 import 'package:farmbot/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
@@ -12,21 +10,21 @@ enum SoilSpotType { moisture, maturity }
 class SoilSpot extends StatelessWidget {
   const SoilSpot({
     super.key,
+    required this.value,
     required this.spotNumber,
-    required this.rowNumber,
+    required this.name,
     required this.type,
   });
+  final bool value;
   final int spotNumber;
-  final int rowNumber;
+  final String name;
   final SoilSpotType type;
 
   @override
   Widget build(BuildContext context) {
-    int x = Random().nextInt(2);
-
     LottieBuilder soilStatusAnimation(SoilSpotType type) {
       if (type == SoilSpotType.moisture) {
-        return x == 1
+        return value
             ? Assets.animation.plant.lottie(
                 repeat: false,
               )
@@ -34,7 +32,7 @@ class SoilSpot extends StatelessWidget {
                 repeat: true,
               );
       } else {
-        return x == 1
+        return value
             ? Assets.animation.ripe.lottie(
                 repeat: true,
               )
@@ -46,9 +44,9 @@ class SoilSpot extends StatelessWidget {
 
     String soilStatusText() {
       if (type == SoilSpotType.moisture) {
-        return x == 1 ? "Good".tr : "Bad Water".tr;
+        return value ? "Good".tr : "Bad Water".tr;
       } else {
-        return x == 1 ? "ripe".tr : "unripe".tr;
+        return value ? "ripe".tr : "unripe".tr;
       }
     }
 
@@ -60,7 +58,7 @@ class SoilSpot extends StatelessWidget {
           color: Colors.grey.shade50,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: x == 1 ? Colors.green : Colors.red,
+            color: value ? Colors.green : Colors.red,
           ),
         ),
         child: Column(
@@ -72,7 +70,7 @@ class SoilSpot extends StatelessWidget {
             ),
             Text(
               textAlign: TextAlign.center,
-              "${"Spot".tr} ${spotNumber * rowNumber}",
+              "${"Spot".tr} $spotNumber",
               style: MyStyles.kFont20BlackW400,
             ),
             const Gap(5),
