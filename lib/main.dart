@@ -37,16 +37,6 @@ class FarmBotApp extends StatelessWidget {
   Widget build(BuildContext context) {
     MyScreenUtils.initUtils(context);
     return GetMaterialApp(
-      builder: (context, child) => Stack(
-        children: [
-          child ?? Container(),
-          const Watermark(
-            text: "Mohamed",
-            columnCount: 5,
-            rowCount: 3,
-          ), // Apply it globally
-        ],
-      ),
       initialBinding: InitBindings(),
       debugShowCheckedModeBanner: false,
       translations: FarmBotTranslations(),
